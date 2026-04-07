@@ -1,4 +1,8 @@
-const personaje = { };
+const personaje = {};
+
+const escenario = {};
+
+const capitulo = {};
 
 
 function partidanueva(){

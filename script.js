@@ -14,4 +14,6 @@ function partidanueva(){
     document.getElementById("texto").innerText=
 }
 
-function 
+function cargarpartida (){
+
+}

@@ -2,14 +2,27 @@ const personaje = {};
 
 const escenario = {};
 
-const capitulo = {};
-
-
+const historia = {};
 let escenaActual = "inicio";
 
 
 function mostrarEscena () {
+const escena = historia[escenaActual]
 
+document.getElementById("texto"). innerText = escena.texto;
+
+const contenedor = document.getElementById("opciones");
+contenedor.innerHTML="";
+
+escena.opciones.forEach(op=>{const botón = document.createElement("button");
+boton.innerText=op.texto;
+
+boton.onclick = ()=>escenaActual=op.siguiente;
+mostrarEscena();
+};
+
+contenedor.appendChild(boton);
+});
 }
 
 function partidanueva(){

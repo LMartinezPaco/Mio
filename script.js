@@ -2,7 +2,19 @@ const personaje = {};
 
 const escenario = {};
 
-const historia = {};
+const historia = {
+inicio: {
+    texto: "Conoces a alguien...",
+    opciones: [
+      { texto: "Hablar", siguiente: "hablar" }
+    ]
+  },
+
+  hablar: {
+    texto: "Te sonríe 💕",
+    opciones: []
+  }
+};
 let escenaActual = "inicio";
 
 

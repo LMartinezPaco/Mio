@@ -14,10 +14,11 @@ document.getElementById("texto"). innerText = escena.texto;
 const contenedor = document.getElementById("opciones");
 contenedor.innerHTML="";
 
-escena.opciones.forEach(op=>{const botón = document.createElement("button");
+escena.opciones.forEach(op=>{const boton = document.createElement("button");
 boton.innerText=op.texto;
 
 boton.onclick = ()=>escenaActual=op.siguiente;
+guardarPartida();
 mostrarEscena();
 };
 
@@ -26,6 +27,8 @@ contenedor.appendChild(boton);
 }
 
 function partidanueva(){
+
+escenaActual="inicio";
     document.getElementById("menu").style.display="none";
     document.getElementById("juego").style.display="block";
 
@@ -35,7 +38,7 @@ mostrarEscena(); //empieza
 }
 
 function guardarPartida(){
-localstorage.setItem("escena", escenaActual);
+localStorage.setItem("escena", escenaActual);
 }
 
 function cargarpartida (){
@@ -56,5 +59,5 @@ function cargarpartida (){
 
 function borrarPartida () {
 localStorage.removeItem("escena");
-alerta ("Partida borrada")
+alert ("Partida borrada")
 }

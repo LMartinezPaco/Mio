@@ -4,10 +4,13 @@ const escenario = {};
 
 const capitulo = {};
 
-let escenaActual = "capitulo 1";
+
+let escenaActual = "inicio";
 
 
+function mostrarEscena () {
 
+}
 
 function partidanueva(){
     document.getElementById("menu").style.display="none";
